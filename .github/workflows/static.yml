@@ -21,7 +21,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: website   # ya "." agar root me hai
-      - name: Deploy
+          # Upload root directory containing index.html
+          path: './'
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
